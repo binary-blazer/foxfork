@@ -1,11 +1,6 @@
-+++
-title = "`gluon.json` Reference"
-weight = 0
-+++
+# foxfork.json Reference
 
-# gluon.json Reference
-
-This reference guide may get outdated. If you need to check something, you can read [the config interface type](https://github.com/pulse-browser/gluon/blob/main/src/utils/config.ts#L96).
+This reference guide may get outdated. If you need to check something, you can read [the config interface type](https://github.com/binary-blazer/foxfork/blob/main/src/utils/config.ts#L96).
 
 ## name
 
@@ -13,7 +8,7 @@ This is the name of the product that is to be built.
 
 ```json
 {
-  "name": "Pulse Browser"
+  "name": "FoxFork Browser"
 }
 ```
 
@@ -23,7 +18,7 @@ The name of the company that is building the browser
 
 ```json
 {
-  "vendor": "Fushra"
+  "vendor": "BinaryBlazer"
 }
 ```
 
@@ -33,7 +28,7 @@ A reverse DNS identifier for the browser
 
 ```json
 {
-  "appId": "com.fushra.browser"
+  "appId": "com.binaryblazer.browser"
 }
 ```
 
@@ -43,7 +38,7 @@ The name of the output binary.
 
 ```json
 {
-  "binaryName": "pulse-browser"
+  "binaryName": "foxfork-browser"
 }
 ```
 
@@ -53,7 +48,7 @@ The host of the update server for updating. This is configured as part of the bu
 
 ```json
 {
-  "updateHostname": "updates.pulsebrowser.app"
+  "updateHostname": "updates.foxfork.app"
 }
 ```
 
@@ -97,13 +92,13 @@ Example:
 Commands that maybe used:
 
 ```sh
-gluon license-check
-gluon lc # Alias
+foxfork license-check
+foxfork lc # Alias
 ```
 
 ## version
 
-Provides information to gluon about the product and version that Gluon is responsible for managing.
+Provides information to foxfork about the product and version that FoxFork is responsible for managing.
 
 Specification:
 
@@ -145,7 +140,7 @@ Example
 
 ## buildOptions
 
-These are flags that change how parts of Gluon operate.
+These are flags that change how parts of FoxFork operate.
 
 ### windowsUseSymbolicLinks
 
@@ -210,8 +205,8 @@ Example:
 Commands that use this:
 
 ```sh
-gluon download
-gluon updates-addons # Generates update manifests for addons
+foxfork download
+foxfork updates-addons # Generates update manifests for addons
 ```
 
 ## brands
@@ -255,13 +250,13 @@ Example:
   "brands": {
     "stable": {
       "backgroundColor": "#2B2A33",
-      "brandShorterName": "Pulse",
-      "brandShortName": "Pulse Browser",
-      "brandFullName": "Pulse Browser",
+      "brandShorterName": "FoxFork",
+      "brandShortName": "FoxFork Browser",
+      "brandFullName": "FoxFork Browser",
       "release": {
         "displayVersion": "1.0.0",
         "github": {
-          "repo": "pulse-browser/browser"
+          "repo": "binary-blazer/browser"
         },
         "x86": {
           "windowsMar": "windows.mar",
@@ -272,13 +267,13 @@ Example:
     },
     "beta": {
       "backgroundColor": "#2B2A33",
-      "brandShorterName": "Pulse",
-      "brandShortName": "Pulse Browser",
-      "brandFullName": "Pulse Browser Beta",
+      "brandShorterName": "FoxFork",
+      "brandShortName": "FoxFork Browser",
+      "brandFullName": "FoxFork Browser Beta",
       "release": {
         "displayVersion": "1.0.0-b.0",
         "github": {
-          "repo": "pulse-browser/browser"
+          "repo": "binary-blazer/browser"
         },
         "x86": {
           "windowsMar": "windows.mar",
@@ -289,13 +284,13 @@ Example:
     },
     "alpha": {
       "backgroundColor": "#2B2A33",
-      "brandShorterName": "Pulse",
-      "brandShortName": "Pulse Browser",
-      "brandFullName": "Pulse Browser Alpha",
+      "brandShorterName": "FoxFork",
+      "brandShortName": "FoxFork Browser",
+      "brandFullName": "FoxFork Browser Alpha",
       "release": {
         "displayVersion": "1.0.0-a.16",
         "github": {
-          "repo": "pulse-browser/browser"
+          "repo": "binary-blazer/browser"
         },
         "x86": {
           "windowsMar": "windows.mar",
@@ -311,8 +306,8 @@ Example:
 Commands:
 
 ```sh
-gluon build
-gluon package
-gluon updates-browser
-gluon set brand <brand_name>
+foxfork build
+foxfork package
+foxfork updates-browser
+foxfork set brand <brand_name>
 ```

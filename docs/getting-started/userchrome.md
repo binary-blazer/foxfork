@@ -2,13 +2,13 @@
 
 If you have already setup your project, you should have a working version of firefox that you built yourself:
 
-![A regular firefox compile](/images/userchrome/001_Vanilla_firefox.png)
+![A regular firefox compile](https://github.com/binary-blazer/foxfork/blob/main/images/userchrome/001_Vanilla_firefox.png)
 
 Just like Electron apps, the entire Firefox ui is an (x)html page that is styled with css. This makes the process of giving our browser an identity very easy.
 
 Because it is just web technologies, we can use debugging tools (like inspect element) to understand what changes we want to make to the browser. You can open these debugging tools by pressing the keyboard shortcut `CTRL + ALT + SHIFT + I` (`CMD + OPTION + SHIFT + I` on MacOS).
 
-![Inspect element but for a web browser](/images/userchrome/002_Browser_Toolbox.png)
+![Inspect element but for a web browser](https://github.com/binary-blazer/foxfork/blob/main/images/userchrome/002_Browser_Toolbox.png)
 
 Because this is a more visual process, the rest of this tutorial is going to be in this video:
 

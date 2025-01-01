@@ -27,7 +27,7 @@ Install [NodeJS](https://nodejs.org/en/download/current/) on your system. This s
 choco install make
 ```
 
-You should be good to return back to the main [Getting Started docs](/getting-started/overview)
+You should be good to return back to the main [Getting Started docs](https://foxfork.binaryblazer.me/getting-started/overview)
 
 ## Additional packages required for releasing
 

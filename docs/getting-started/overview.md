@@ -10,7 +10,7 @@ If you are having problems with following these instructions, or with FoxFork in
 
 ### System requirements
 
-- **OS**: Linux and MacOS (If you are using windows, take a look at the [Windows Guide](../windows/))
+- **OS**: Linux and MacOS (If you are using windows, take a look at the [Windows Guide](https://foxfork.binaryblazer.me/guides/windows/))
 - **Disk Space**: 20GB
 - **Memory**: 4GB
 - **CPU**: 2 cores

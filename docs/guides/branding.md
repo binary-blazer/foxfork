@@ -21,7 +21,7 @@ You will first need to add a `brands` key within your `foxfork.json`. For exampl
 }
 ```
 
-More information regarding the available keys for this config object can be found in the [reference section](/reference/config/#brands).
+More information regarding the available keys for this config object can be found in the [reference section](https://foxfork.binaryblazer.me/reference/config/#brands).
 
 You will then need to create the folder `config/branding/<brand_name>`. In here, you will need to add a high-resolution `logo.png` (which will then be downscaled on import) and a `MacOSInstaller.svg` file, which will be used as the background for the macOS dmg file.
 

@@ -100,7 +100,7 @@ export MOZ_SOURCE_REPO=https://github.com/dothq/browser-desktop # <-- Change thi
 export MOZ_SOURCE_CHANGESET=${changeset}
 ```
 
-This directory is also where you would put [branding assets for your browser](/guides/branding)
+This directory is also where you would put [branding assets for your browser](https://foxfork.binaryblazer.me/guides/branding)
 
 ## src/
 
