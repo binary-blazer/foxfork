@@ -1,10 +1,10 @@
 <div align="center">
 
 <p align="center">
-  <img width="98" src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Package/3D/package_3d.png"/>
+  <img width="98" src="https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Fox/3D/fox_3d.png"/>
 </p>
 
-# Gluon
+# FoxFork (Gluon Fork)
 
 Build Firefox-based browsers with ease
 
@@ -17,28 +17,38 @@ Build Firefox-based browsers with ease
 Per project (recommended):
 
 ```sh
-npm install gluon-build
+npm install foxfork
 # or
-yarn add gluon-build
+yarn add foxfork
+# or
+pnpm add foxfork
+# or
+bun add foxfork
 ```
 
 Globally:
 
 ```sh
-npm install -g gluon-build
+npm install -g foxfork
 # or
-yarn global add gluon-build
+yarn global add foxfork
+# or
+pnpm add -g foxfork
 
 # Note: Linux and mac users may have to run the above command with sudo
 ```
 
 ## Documentation
 
-Documentation is available on [docs.gluon.dev](https://docs.gluon.dev) or in the docs folder of this repository.
+Documentation is available on [foxfork.binaryblazer.me](https://foxfork.binaryblazer.me) or in the docs folder of this repository.
 
 ## Licencing notes
 
 The following is included in good faith. The writer is not a lawyer, and this is not legal advice.
+
+### FoxFork
+
+FoxFork is a fork of Gluon, which is licensed under the MIT License. The MIT License is included in the LICENSE file in this repository.
 
 ### Melon
 

@@ -9,7 +9,7 @@ import { Cmd } from './types'
 export const commands: Cmd[] = [
   {
     cmd: 'bootstrap',
-    description: 'Bootstrap the gluon app.',
+    description: 'Bootstrap the foxfork app.',
     requestController: async () =>
       (await import('./commands/bootstrap')).bootstrap,
   },
@@ -17,7 +17,7 @@ export const commands: Cmd[] = [
     cmd: 'build',
     aliases: ['b'],
     description:
-      'Build the gluon app. Specify the OS param for cross-platform builds.',
+      'Build the foxfork app. Specify the OS param for cross-platform builds.',
     options: [
       {
         arg: '--u, --ui',
@@ -70,7 +70,7 @@ export const commands: Cmd[] = [
       {
         arg: '--force',
         description: 'Delete the engine directory if it already exists',
-      }
+      },
     ],
     requestController: async () =>
       (await import('./commands/download')).download,
@@ -79,8 +79,7 @@ export const commands: Cmd[] = [
     cmd: 'update',
     aliases: ['update-ff'],
     description: 'Update Firefox to latest version.',
-    requestController: async () =>
-      (await import('./commands/update')).update,
+    requestController: async () => (await import('./commands/update')).update,
     disableMiddleware: true,
   },
   {
@@ -132,7 +131,7 @@ export const commands: Cmd[] = [
     aliases: ['pack'],
     description: 'Package the browser for distribution.',
     requestController: async () =>
-      (await import('./commands/package')).gluonPackage,
+      (await import('./commands/package')).foxforkPackage,
   },
   {
     cmd: 'reset',
@@ -147,7 +146,7 @@ export const commands: Cmd[] = [
   },
   {
     cmd: 'setup-project',
-    description: 'Sets up a gluon project for the first time',
+    description: 'Sets up a foxfork project for the first time',
     requestController: async () =>
       (await import('./commands/setup-project')).setupProject,
   },

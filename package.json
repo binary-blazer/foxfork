@@ -1,27 +1,22 @@
 {
-  "name": "gluon-build",
+  "name": "foxfork",
   "version": "1.0.0-rc.5",
-  "description": "🍉 Build Firefox-based browsers with ease",
+  "description": "Build Firefox-based browsers with ease",
   "main": "index.js",
   "reveal": true,
   "bin": {
-    "gluon": "./dist/index.js"
+    "foxfork": "./dist/index.js"
   },
   "scripts": {
     "test": "jest",
     "test:dev": "jest --watch",
-    "build": "tsc && chmod +x ./dist/index.js && cp src/commands/license-check.txt dist/commands/license-check.txt",
-    "build:win": "tsc && copy /y .\\src\\commands\\license-check.txt .\\dist\\commands\\license-check.txt",
+    "build": "tsc",
     "format": "prettier . -w",
-    "lint": "eslint .",
-    "docs:install": "",
-    "docs:build": "zola --root docs/ build",
-    "docs:dev": "zola --root docs/ serve",
-    "self": "cd testing && node ../dist/index.js"
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pulse-browser/gluon.git"
+    "url": "git+https://github.com/binary-blazer/foxfork.git"
   },
   "keywords": [
     "firefox",
@@ -29,13 +24,14 @@
     "build-tool"
   ],
   "authors": [
-    "TrickyPR"
+    "TrickyPR",
+    "Jonas F. Franke <@binary-blazer>"
   ],
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/pulse-browser/gluon/issues"
+    "url": "https://github.com/binary-blazer/foxfork/issues"
   },
-  "homepage": "https://github.com/pulse-browser/gluon#readme",
+  "homepage": "https://github.com/binary-blazer/foxfork#readme",
   "dependencies": {
     "@resvg/resvg-js": "^1.4.0",
     "async-icns": "^1.0.2",
@@ -43,6 +39,7 @@
     "chalk": "^4.1.0",
     "cli-progress": "^3.9.1",
     "commander": "^6.2.1",
+    "copy": "^0.3.2",
     "execa": "^5.1.1",
     "fs-extra": "^10.0.0",
     "ini": "^3.0.0",

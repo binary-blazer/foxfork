@@ -12,19 +12,17 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.1
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 'lts/*'
-          cache: 'yarn'
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2.0.1
 
       - name: Install dependencies
-        run: yarn --frozen-lockfile
+        run: bun install
 
       - name: Build
-        run: yarn build
+        run: bun run build
 
       - name: Test
-        run: yarn test
+        run: bun run test
 
       - name: Lint
-        run: yarn lint
+        run: bun run lint
