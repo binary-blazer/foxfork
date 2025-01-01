@@ -1,8 +1,3 @@
-+++
-title = "Automatic updates"
-weight = 20
-+++
-
 # Automatic updates
 
 > **Note**
@@ -23,7 +18,7 @@ Attached to your "brand", you will need to include information regarding that br
       "release": {
         "displayVersion": "1.0.0-a.17",
         "github": {
-          "repo": "pulse-browser/browser"
+          "repo": "binary-blazer/browser"
         },
         "x86": {
           "windowsMar": "windows.mar",
@@ -43,10 +38,10 @@ When creating update manifests, they will point to [the release tagged `displayV
 
 ## Creating MAR files and update manifests
 
-Both `.mar` files and the update manifests are automatically created by running `gluon package`. This will generate a number of files in the `dist` directory.
+Both `.mar` files and the update manifests are automatically created by running `foxfork package`. This will generate a number of files in the `dist` directory.
 
 An `output.mar` will be included in the root, which you should rename to the appropriate platform. For example, `linux.mar` for linux. This should be included with your GitHub release.
 
 Update manifests are stored in the `dist/update` directory. The contents of this directory should be uploaded to a webserver (e.g. GitHub Pages or S3) such that their root is at `/updates/browser/`.
 
-You will then need to set the `updateHostname` in `gluon.json` to the url of your update server. For Pulse, this is `updates.pulsebrowser.app`. You may also need to change the update server specified [here](https://searchfox.org/mozilla-central/rev/560b7b1b174ed36912b969eee0c1920f3c59bc56/build/moz.build#94).
+You will then need to set the `updateHostname` in `foxfork.json` to the url of your update server. For Pulse, this is `updates.foxfork.app`. You may also need to change the update server specified [here](https://searchfox.org/mozilla-central/rev/560b7b1b174ed36912b969eee0c1920f3c59bc56/build/moz.build#94).

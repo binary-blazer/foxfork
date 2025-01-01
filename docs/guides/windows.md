@@ -1,8 +1,3 @@
-+++
-title = "Preparing Windows"
-weight = 0
-+++
-
 # Preparing Windows
 
 Building on windows is significantly more complex than building on macos or linux. This guide will walk you through preparing your Windows machine for building a Firefox fork. Before building, you should be aware that [only Windows 10 or 11 are officially supported](https://firefox-source-docs.mozilla.org/build/buildsystem/supported-configurations.html#build-hosts), but you might be able to get other versions to work.
@@ -29,7 +24,6 @@ You will need to install [MozillaBuild](https://ftp.mozilla.org/pub/mozilla/libr
 Install [NodeJS](https://nodejs.org/en/download/current/) on your system. This should also install chocolatey. If it does not, [install it manually](https://docs.chocolatey.org/en-us/choco/setup). To install the final two dependencies, run:
 
 ```sh
-npm install --global yarn
 choco install make
 ```
 

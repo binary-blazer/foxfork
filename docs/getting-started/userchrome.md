@@ -1,8 +1,3 @@
-+++
-title = "Customizing Your Browser's UI"
-weight = 15
-+++
-
 # Customizing Your Browser's UI
 
 If you have already setup your project, you should have a working version of firefox that you built yourself:
