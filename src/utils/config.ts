@@ -12,7 +12,7 @@ import { BIN_NAME } from '../constants'
 import { log } from '../log'
 
 export const projectDirectory = process.cwd()
-export const configPath = join(projectDirectory, 'gluon.json')
+export const configPath = join(projectDirectory, 'foxfork.json')
 
 let hasWarnedAboutConfig = false
 

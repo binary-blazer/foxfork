@@ -8,12 +8,12 @@ site/
 tests/
 
 .prettierrc.json
-gluon.json
+foxfork.json
 tsconfig.json
 yarn.lock
 .eslintignore
 .eslintrc.json
-.gluon
+.foxfork
 .vscode/
 .github/
 .eslintrc.js

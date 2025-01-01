@@ -108,7 +108,7 @@ testing/
 site/
 
 docs/public/
-.gluon
+.foxfork
 
 # Patch generation
 .moz-central
