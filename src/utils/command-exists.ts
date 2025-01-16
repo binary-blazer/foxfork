@@ -73,7 +73,7 @@ const commandExistsWindowsSync = function (
 ): boolean {
   // Regex from Julio from: https://stackoverflow.com/questions/51494579/regex-windows-path-validator
   if (
-    !/^(?!(?:.*\s|.*\.|\W+)$)(?:[A-Za-z]:)?(?:[^\\s"*:<>?|]+(?:\/\/|\/|\\\\|\\)?)+$/m.test(
+    !/^(?!(?:.*\s|.*\.|\W+)$)(?:[A-Za-z]:)?(?:[^\s"*:<>?|]+(?:[\/\\](?!.*[^\s"*:<>?|])[^\s"*:<>?|]+)*)$/m.test(
       commandName
     )
   ) {
