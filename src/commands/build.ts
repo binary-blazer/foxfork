@@ -35,7 +35,7 @@ const applyConfig = async (os: string) => {
     changeset = stdout.trim()
   } catch (error) {
     log.warning(
-      'Gluon expects that you are building your browser with git as your version control'
+      'FoxFork expects that you are building your browser with git as your version control'
     )
     log.warning(
       'If you are using some other version control system, please migrate to git'
@@ -50,8 +50,8 @@ const applyConfig = async (os: string) => {
     name: config.name,
     vendor: config.name,
     appId: config.appId,
-    brandingDir: existsSync(join(ENGINE_DIR, 'branding', 'gluon'))
-      ? 'branding/gluon'
+    brandingDir: existsSync(join(ENGINE_DIR, 'branding', 'foxfork'))
+      ? 'branding/foxfork'
       : 'branding/unofficial',
     binName: config.binaryName,
     changeset,

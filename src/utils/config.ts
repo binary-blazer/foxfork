@@ -158,7 +158,7 @@ export const defaultLicenseConfig: LicenseConfig = {
 }
 
 export const defaultConfig: Config = {
-  name: 'Unknown gluon build',
+  name: 'Unknown foxfork build',
   vendor: 'Unknown',
   appId: 'unknown.appid',
   binaryName: 'firefox',

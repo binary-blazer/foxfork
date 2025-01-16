@@ -1,6 +1,5 @@
 ac_add_options --with-app-name=${binName}
 export MOZ_USER_DIR="${name}"
-export MOZ_APP_VENDOR="${vendor}"
 export MOZ_APP_BASENAME=${binName}
 export MOZ_APP_PROFILE=${binName}
 export MOZ_APP_DISPLAYNAME="${name}"

@@ -54,7 +54,7 @@ The host of the update server for updating. This is configured as part of the bu
 
 ## license
 
-Information about the license the browser will be under. This is used by the Gluon license checker to ensure files have the MPL header if specified.
+Information about the license the browser will be under. This is used by the FoxFork license checker to ensure files have the MPL header if specified.
 
 Specification:
 

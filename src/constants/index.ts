@@ -6,7 +6,7 @@ import { existsSync, mkdirSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { log } from '../log'
 
-export const BIN_NAME = 'gluon'
+export const BIN_NAME = 'foxfork'
 
 export const BUILD_TARGETS = ['linux', 'windows', 'macos']
 export const ARCHITECTURE = ['i686', 'x86_64']
