@@ -1,6 +1,6 @@
 {
   "name": "foxfork",
-  "version": "1.0.0-rc.1",
+  "version": "1.0.0-rc.2",
   "description": "Build Firefox-based browsers with ease",
   "main": "index.js",
   "reveal": true,
