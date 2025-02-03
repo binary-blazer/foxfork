@@ -6,7 +6,7 @@ import { createWriteStream } from 'node:fs'
 import axios from 'axios'
 import cliProgress from 'cli-progress'
 import { Duplex } from 'node:stream'
-import { log } from '../log'
+import { log } from '../log.js'
 
 export async function downloadFileToLocation(
   url: string,

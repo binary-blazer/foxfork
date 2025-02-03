@@ -5,15 +5,12 @@ import { isAppleSilicon } from 'is-apple-silicon'
 import { dirname, join } from 'node:path'
 import { create } from 'xmlbuilder2'
 import { bin_name, config } from '../..'
-import { DIST_DIR, OBJ_DIR } from '../../constants'
-import { log } from '../../log'
-import {
-  dynamicConfig,
-  ensureEmpty,
-  generateHash,
-  getSize,
-  ReleaseInfo,
-} from '../../utils'
+import { DIST_DIR, OBJ_DIR } from '../../constants/index.js'
+import { log } from '../../log.js'
+import { get } from '../../utils/dynamic-config.js'
+import { ensureEmpty, getSize } from '../../utils/fs.js'
+import { generateHash } from '../../utils/change-tracking.js'
+import { ReleaseInfo } from '../../utils/config.js'
 
 /**
  * These are all of the different platforms that aus should deploy to. Note that
@@ -134,13 +131,13 @@ function getTargets(): string[] {
 export async function generateBrowserUpdateFiles() {
   log.info('Creating browser AUS update files')
 
-  const brandingKey = dynamicConfig.get('brand') as string
+  const brandingKey = get('brand') as string
   const channel = brandingKey
   const brandingDetails = config.brands[brandingKey]
   const releaseInfo = brandingDetails.release
   const { displayVersion: version } = releaseInfo
 
-  const marPath = dynamicConfig.get('marPath')
+  const marPath = get('marPath')
 
   if (!marPath || marPath == '') {
     log.error(

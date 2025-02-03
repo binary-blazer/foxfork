@@ -2,9 +2,9 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import { existsSync } from 'node:fs'
-import { log } from '../log'
-import { ENGINE_DIR } from '../constants'
-import { dispatch } from '../utils'
+import { log } from '../log.js'
+import { ENGINE_DIR } from '../constants/index.js'
+import { dispatch } from '../utils/dispatch.js'
 
 export const execute = async (cmd: string[]) => {
   if (existsSync(ENGINE_DIR)) {

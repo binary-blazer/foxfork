@@ -2,8 +2,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
-import * as dynamicConfig from './dynamic-config'
-import { readItem, removeItem } from './store'
+import * as dynamicConfig from './dynamic-config.js'
+import { readItem, removeItem } from './store.js'
 
 describe('set', () => {
   it('runs without errors', () => dynamicConfig.set('brand', 'test'))

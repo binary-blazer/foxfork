@@ -6,18 +6,18 @@ import { copyFile } from 'node:fs/promises'
 import { join, dirname } from 'node:path'
 
 import prompts from 'prompts'
-import { BIN_NAME } from '../constants'
+import { BIN_NAME } from '../constants/index.js'
 
-import { log } from '../log'
+import { log } from '../log.js'
 import {
   Config,
   configPath,
-  delay,
-  getLatestFF,
   projectDirectory,
   SupportedProducts,
-  walkDirectory,
-} from '../utils'
+} from '../utils/config.js'
+import { delay } from '../utils/delay.js'
+import { getLatestFF } from '../utils/version.js'
+import { walkDirectory } from '../utils/fs.js'
 
 // =============================================================================
 // User interaction portion

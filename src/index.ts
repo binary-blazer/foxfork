@@ -7,11 +7,13 @@ import commander, { Command } from 'commander'
 import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
-import { errorHandler, config as configInited, versionFormatter } from './utils'
+import { errorHandler } from './utils/error-handler.js'
+import { config as configInited } from './utils/config.js'
+import { versionFormatter } from './utils/version-formatter.js'
 import { commands } from './cmds'
-import { BIN_NAME, ENGINE_DIR } from './constants'
-import { updateCheck } from './middleware/update-check'
-import { registerCommand } from './middleware/register-command'
+import { BIN_NAME, ENGINE_DIR } from './constants/index.js'
+import { updateCheck } from './middleware/update-check.js'
+import { registerCommand } from './middleware/register-command.js'
 import { log } from './log'
 
 // We have to use a dynamic require here, otherwise the typescript compiler

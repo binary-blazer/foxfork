@@ -2,8 +2,8 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import { bin_name, config } from '..'
-import { log } from '../log'
-import { getLatestFF } from '../utils'
+import { log } from '../log.js'
+import { getLatestFF } from '../utils/version.js'
 
 export const updateCheck = async (): Promise<void> => {
   const firefoxVersion = config.version.version

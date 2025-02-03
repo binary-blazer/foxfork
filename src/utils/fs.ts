@@ -12,7 +12,7 @@ import {
 import { mkdir, readdir, stat } from 'node:fs/promises'
 import { join, isAbsolute } from 'node:path'
 
-import { log } from '../log'
+import { log } from '../log.js'
 
 /**
  * On windows, converts a windows style path to a unix path. On unix, passes the

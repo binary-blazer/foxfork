@@ -3,8 +3,8 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import { bin_name, config } from '..'
-import { log } from '../log'
-import { downloadInternals } from './download/firefox'
+import { log } from '../log.js'
+import { downloadInternals } from './download/firefox.js'
 
 type Options = {
   force?: boolean

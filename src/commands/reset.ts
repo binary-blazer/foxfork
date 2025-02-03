@@ -4,8 +4,8 @@
 import execa from 'execa'
 
 import { bin_name } from '..'
-import { ENGINE_DIR } from '../constants'
-import { log } from '../log'
+import { ENGINE_DIR } from '../constants/index.js'
+import { log } from '../log.js'
 
 export const reset = async (): Promise<void> => {
   log.warning(`This will remove any changes that you have made to firefox`)

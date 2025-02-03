@@ -4,8 +4,8 @@
 import execa from 'execa'
 import { existsSync, statSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { log } from '../log'
-import { ENGINE_DIR } from '../constants'
+import { log } from '../log.js'
+import { ENGINE_DIR } from '../constants/index.js'
 
 export const discard = async (file: string): Promise<void> => {
   const realFile = resolve(ENGINE_DIR, file)

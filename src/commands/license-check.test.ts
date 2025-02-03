@@ -3,7 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import { join } from 'node:path'
-import { isValidLicense } from './license-check'
+import { isValidLicense } from './license-check.js'
 
 describe('isValidLicense', () => {
   it('Returns true if the file contains a valid license', async () => {

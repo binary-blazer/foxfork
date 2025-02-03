@@ -1,4 +1,4 @@
-import { shouldSkipOptionalCopy } from './setup-project'
+import { shouldSkipOptionalCopy } from './setup-project.js'
 
 describe('shouldSkipOptionalCopy', () => {
   it('Returns true if the file is not optional', () => {

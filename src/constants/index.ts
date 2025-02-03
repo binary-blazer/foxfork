@@ -4,7 +4,7 @@
 import execa from 'execa'
 import { existsSync, mkdirSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { log } from '../log'
+import { log } from '../log.js'
 
 export const BIN_NAME = 'foxfork'
 

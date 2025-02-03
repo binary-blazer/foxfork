@@ -7,9 +7,9 @@
 
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { BIN_NAME } from '../constants'
+import { BIN_NAME } from '../constants/index.js'
 
-import { log } from '../log'
+import { log } from '../log.js'
 
 export const projectDirectory = process.cwd()
 export const configPath = join(projectDirectory, 'foxfork.json')

@@ -7,9 +7,9 @@
 
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { log } from '../log'
-import { MELON_DIR, SRC_DIR } from '../constants'
-import { walkDirectory } from '../utils'
+import { log } from '../log.js'
+import { MELON_DIR, SRC_DIR } from '../constants/index.js'
+import { walkDirectory } from '../utils/fs.js'
 
 export const patchCountFile = resolve(MELON_DIR, 'patchCount')
 

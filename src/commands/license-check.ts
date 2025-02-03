@@ -4,9 +4,9 @@
 import { readFile, writeFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
-import { SRC_DIR } from '../constants'
-import { walkDirectory } from '../utils/fs'
-import { Task, TaskList } from '../utils/task-list'
+import { SRC_DIR } from '../constants/index.js'
+import { walkDirectory } from '../utils/fs.js'
+import { Task, TaskList } from '../utils/task-list.js'
 
 const ignoredFiles = new RegExp('.*\\.(json|patch|md|jpeg|png|gif|tiff|ico)')
 const licenseIgnore = new RegExp('(//|#) Ignore license in this file', 'g')

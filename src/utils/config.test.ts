@@ -8,7 +8,7 @@ import {
   getConfig,
   hasConfig,
   rawConfig,
-} from './config'
+} from './config.js'
 
 export function preserveExistingConfig(): void {
   let configExists = false

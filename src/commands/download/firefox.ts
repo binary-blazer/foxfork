@@ -4,12 +4,12 @@ import { readdir } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 
 import { bin_name } from '../..'
-import { BASH_PATH, ENGINE_DIR, MELON_TMP_DIR } from '../../constants'
-import { log } from '../../log'
-import { commandExistsSync } from '../../utils/command-exists'
-import { downloadFileToLocation } from '../../utils/download'
-import { ensureDirectory, windowsPathToUnix } from '../../utils/fs'
-import { init } from '../init'
+import { BASH_PATH, ENGINE_DIR, MELON_TMP_DIR } from '../../constants/index.js'
+import { log } from '../../log.js'
+import { commandExistsSync } from '../../utils/command-exists.js'
+import { downloadFileToLocation } from '../../utils/download.js'
+import { ensureDirectory, windowsPathToUnix } from '../../utils/fs.js'
+import { init } from '../init.js'
 import { config } from '../..'
 import {
   addAddonsToMozBuild,
@@ -19,8 +19,8 @@ import {
   initializeAddon,
   resolveAddonDownloadUrl,
   unpackAddon,
-} from './addon'
-import { configPath } from '../../utils'
+} from './addon.js'
+import { configPath } from '../../utils/config.js'
 
 export function shouldSetupFirefoxSource() {
   return !(

@@ -19,20 +19,24 @@ import pngToIco from 'png-to-ico'
 import asyncIcns from 'async-icns'
 
 import { config } from '../..'
-import { CONFIGS_DIR, ENGINE_DIR, MELON_TMP_DIR } from '../../constants'
-import { log } from '../../log'
 import {
-  addHash,
-  defaultBrandsConfig,
+  CONFIGS_DIR,
+  ENGINE_DIR,
+  MELON_TMP_DIR,
+} from '../../constants/index.js'
+import { log } from '../../log.js'
+import { addHash } from '../../utils/change-tracking.js'
+import { defaultBrandsConfig } from '../../utils/config.js'
+import {
   ensureEmpty,
   filesExist,
   mkdirpSync,
-  stringTemplate,
   walkDirectory,
   windowsPathToUnix,
-} from '../../utils'
-import { templateDirectory } from '../setup-project'
-import { IMelonPatch } from './command'
+} from '../../utils/fs.js'
+import { stringTemplate } from '../../utils/string-template.js'
+import { templateDirectory } from '../setup-project.js'
+import { IMelonPatch } from './command.js'
 
 // =============================================================================
 // Pure constants
