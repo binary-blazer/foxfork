@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/binary-blazer/foxfork.git"
+    "url": "git+https://github.com/shadowbrowser/foxfork.git"
   },
   "keywords": [
     "firefox",
@@ -35,9 +35,9 @@
   ],
   "license": "MPL-2.0",
   "bugs": {
-    "url": "https://github.com/binary-blazer/foxfork/issues"
+    "url": "https://github.com/shadowbrowser/foxfork/issues"
   },
-  "homepage": "https://github.com/binary-blazer/foxfork#readme",
+  "homepage": "https://github.com/shadowbrowser/foxfork#readme",
   "dependencies": {
     "@resvg/resvg-js": "^1.4.0",
     "async-icns": "^1.0.2",
