@@ -4,7 +4,7 @@
 import { existsSync } from 'node:fs'
 import { log } from '../log.js'
 import { ENGINE_DIR } from '../constants/index.js'
-import { dispatch } from '../utils/dispatch.js'
+import { configDispatch } from '../utils/dispatch.js'
 
 export const execute = async (cmd: string[]) => {
   if (existsSync(ENGINE_DIR)) {
@@ -20,7 +20,7 @@ export const execute = async (cmd: string[]) => {
         ' '
       )}\` in \`src\`...`
     )
-    dispatch(bin, arguments_, ENGINE_DIR)
+    configDispatch(bin, { args: arguments_, cwd: ENGINE_DIR })
   } else {
     log.error(`Unable to locate src directory.`)
   }

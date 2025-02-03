@@ -99,7 +99,7 @@ export const commands: Cmd[] = [
     aliases: ['import-patches', 'i'],
     description: 'Import patches into the browser.',
     requestController: async () =>
-      (await import('./commands/patches')).applyPatches,
+      (await import('./commands/patches/command')).applyPatches,
   },
   {
     cmd: 'ff-init <source>',
