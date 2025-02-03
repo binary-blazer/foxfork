@@ -1,18 +1,10 @@
 {
   "name": "foxfork",
-  "version": "1.0.0-rc.6",
+  "version": "1.0.0-rc.7",
   "description": "Build Firefox-based browsers with ease",
-  "main": "index.js",
-  "reveal": true,
   "bin": {
-    "foxfork": "./dist/index.js"
+    "foxfork": "dist/index.js"
   },
-  "files": [
-    "dist",
-    "template",
-    "LICENSE",
-    "README.md"
-  ],
   "scripts": {
     "test": "jest",
     "test:dev": "jest --watch",
