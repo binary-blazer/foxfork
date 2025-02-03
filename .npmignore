@@ -1,8 +1,6 @@
 testing/
 node_modules/
 src/
-!template/src/
-!dist/
 docs/
 site/
 tests/
