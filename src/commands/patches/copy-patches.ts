@@ -8,10 +8,10 @@ import { copyFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import glob from 'tiny-glob'
 
-import { appendToFileSync, mkdirp } from '../../utils/fs.js'
+import { appendToFileSync, mkdirp } from '../../utils'
 import { config } from '../..'
-import { ENGINE_DIR, SRC_DIR } from '../../constants/index.js'
-import { IMelonPatch } from './command.js'
+import { ENGINE_DIR, SRC_DIR } from '../../constants'
+import { IMelonPatch } from './command'
 
 // =============================================================================
 // Utilities

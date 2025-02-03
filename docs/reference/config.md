@@ -148,7 +148,7 @@ When set to `true`, symbolic links will be enabled on Windows. From internal tes
 
 ## addons
 
-An index for each addon. These will be downloaded and configured as part of the `download` step that foxfork performs. You can download extensions from AMO, Github or any URL. Note that the furha-robot will only be able to provide update checking to AMO and Github Extensions.
+An index for each addon. These will be downloaded and configured as part of the `download` step that gluon performs. You can download extensions from AMO, Github or any URL. Note that the furha-robot will only be able to provide update checking to AMO and Github Extensions.
 
 Specification:
 

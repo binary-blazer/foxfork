@@ -5,9 +5,8 @@ import { Command } from 'commander'
 import { existsSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { bin_name } from '..'
-import { log } from '../log.js'
-import { configDispatch } from '../utils/dispatch.js'
-import { config } from '../utils/config.js'
+import { log } from '../log'
+import { config, configDispatch } from '../utils'
 
 export const init = async (directory: Command | string): Promise<void> => {
   const cwd = process.cwd()

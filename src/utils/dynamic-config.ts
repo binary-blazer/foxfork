@@ -1,8 +1,8 @@
 // Defines config that should be set dynamically on the users system. This allows
 // for interfacing between these values
 
-import { log } from '../log.js'
-import { readItem, writeItem } from './store.js'
+import { log } from '../log'
+import { readItem, writeItem } from './store'
 
 export const defaultValues: {
   brand: string

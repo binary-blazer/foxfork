@@ -3,7 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import { readFile } from 'node:fs/promises'
 import { createHash } from 'node:crypto'
-import { readItem, writeItem } from './store.js'
+import { readItem, writeItem } from './store'
 
 /**
  * Generates a hash for a file. The file must be an absolute, normalized path

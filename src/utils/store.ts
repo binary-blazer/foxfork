@@ -5,7 +5,7 @@ import { existsSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { equip, None, OptionEquipped } from 'rustic'
 
-import { MELON_DIR } from '../constants/index.js'
+import { MELON_DIR } from '../constants'
 
 export const readItem = <T>(key: string): OptionEquipped<T> => {
   const fileLocation = join(MELON_DIR, `${key}.json`)

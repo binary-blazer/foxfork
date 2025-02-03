@@ -3,9 +3,9 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import { config } from '..'
-import { ENGINE_DIR } from '../constants/index.js'
-import { log } from '../log.js'
-import { configDispatch } from '../utils/dispatch.js'
+import { ENGINE_DIR } from '../constants'
+import { log } from '../log'
+import { configDispatch } from '../utils'
 
 export const bootstrap = async () => {
   log.info(`Bootstrapping ${config.name}...`)

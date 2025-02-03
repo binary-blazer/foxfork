@@ -3,9 +3,9 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import execa from 'execa'
-import { PATCH_ARGS, ENGINE_DIR } from '../../constants/index.js'
-import { log } from '../../log.js'
-import { IMelonPatch } from './command.js'
+import { PATCH_ARGS, ENGINE_DIR } from '../../constants'
+import { log } from '../../log'
+import { IMelonPatch } from './command'
 
 export interface IGitPatch extends IMelonPatch {
   path: string

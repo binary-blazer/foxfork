@@ -11,7 +11,7 @@ export const commands: Cmd[] = [
     cmd: 'bootstrap',
     description: 'Bootstrap the foxfork app.',
     requestController: async () =>
-      (await import('./commands/bootstrap.js')).bootstrap,
+      (await import('./commands/bootstrap')).bootstrap,
   },
   {
     cmd: 'build',
@@ -30,19 +30,19 @@ export const commands: Cmd[] = [
           "Doesn't check to see if all of the patches have been applied",
       },
     ],
-    requestController: async () => (await import('./commands/build.js')).build,
+    requestController: async () => (await import('./commands/build')).build,
   },
   {
     cmd: 'config <key> [value]',
     aliases: ['set', 'get'],
     description: 'Get and set the dynamic config from this project',
-    requestController: async () => (await import('./commands/set.js')).set,
+    requestController: async () => (await import('./commands/set')).set,
     disableMiddleware: true,
   },
   {
     cmd: 'ci',
     description: 'Configure the CI',
-    requestController: async () => (await import('./commands/ci.js')).ci,
+    requestController: async () => (await import('./commands/ci')).ci,
     options: [
       {
         arg: '--brand <brand>',
@@ -61,7 +61,7 @@ export const commands: Cmd[] = [
   {
     cmd: 'discard <file>',
     description: 'Discard a files changes.',
-    requestController: async () => (await import('./commands/discard.js')).discard,
+    requestController: async () => (await import('./commands/discard')).discard,
   },
   {
     cmd: 'download',
@@ -73,19 +73,19 @@ export const commands: Cmd[] = [
       },
     ],
     requestController: async () =>
-      (await import('./commands/download.js')).download,
+      (await import('./commands/download')).download,
   },
   {
     cmd: 'update',
     aliases: ['update-ff'],
     description: 'Update Firefox to latest version.',
-    requestController: async () => (await import('./commands/update.js')).update,
+    requestController: async () => (await import('./commands/update')).update,
     disableMiddleware: true,
   },
   {
     cmd: 'execute',
     description: 'Execute a command inside the engine directory.',
-    requestController: async () => (await import('./commands/execute.js')).execute,
+    requestController: async () => (await import('./commands/execute')).execute,
   },
   {
     cmd: 'export-file <file>',
@@ -99,19 +99,19 @@ export const commands: Cmd[] = [
     aliases: ['import-patches', 'i'],
     description: 'Import patches into the browser.',
     requestController: async () =>
-      (await import('./commands/patches/command.js')).applyPatches,
+      (await import('./commands/patches')).applyPatches,
   },
   {
     cmd: 'ff-init <source>',
     aliases: ['ff-initialise', 'ff-initialize'],
     description: 'Initialise the Firefox directory.',
-    requestController: async () => (await import('./commands/init.js')).init,
+    requestController: async () => (await import('./commands/init')).init,
   },
   {
     cmd: 'ff-version',
     description: 'Retrieves the version of firefox to build against',
     requestController: async () =>
-      (await import('./commands/ff-version.js')).getFFVersion,
+      (await import('./commands/ff-version')).getFFVersion,
   },
   {
     cmd: 'license-check',
@@ -124,49 +124,49 @@ export const commands: Cmd[] = [
     ],
     description: 'Check the src directory for the absence of MPL-2.0 header.',
     requestController: async () =>
-      (await import('./commands/license-check.js')).licenseCheck,
+      (await import('./commands/license-check')).licenseCheck,
   },
   {
     cmd: 'package',
     aliases: ['pack'],
     description: 'Package the browser for distribution.',
     requestController: async () =>
-      (await import('./commands/package.js')).foxforkPackage,
+      (await import('./commands/package')).foxforkPackage,
   },
   {
     cmd: 'reset',
     description: 'Reset the source directory to stock Firefox.',
-    requestController: async () => (await import('./commands/reset.js')).reset,
+    requestController: async () => (await import('./commands/reset')).reset,
   },
   {
     cmd: 'run [chrome]',
     aliases: ['r', 'open'],
     description: 'Run the browser.',
-    requestController: async () => (await import('./commands/run.js')).run,
+    requestController: async () => (await import('./commands/run')).run,
   },
   {
     cmd: 'setup-project',
     description: 'Sets up a foxfork project for the first time',
     requestController: async () =>
-      (await import('./commands/setup-project.js')).setupProject,
+      (await import('./commands/setup-project')).setupProject,
   },
   {
     cmd: 'status',
     description: 'Status and files changed for src directory.',
-    requestController: async () => (await import('./commands/status.js')).status,
+    requestController: async () => (await import('./commands/status')).status,
   },
   {
     cmd: 'updates-browser',
     description:
       'Generate update manifest for the browser binary. This should be run after packaging',
     requestController: async () =>
-      (await import('./commands/updates/browser.js')).generateBrowserUpdateFiles,
+      (await import('./commands/updates/browser')).generateBrowserUpdateFiles,
   },
   {
     cmd: 'updates-addons',
     description:
       'Generates update manifests for system addons that are included in the browser',
     requestController: async () =>
-      (await import('./commands/updates/addons.js')).generateAddonUpdateFiles,
+      (await import('./commands/updates/addons')).generateAddonUpdateFiles,
   },
 ]

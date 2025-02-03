@@ -3,21 +3,20 @@ import { join } from 'node:path'
 import { isMatch } from 'picomatch'
 
 import { config } from '../..'
-import { ENGINE_DIR, MELON_TMP_DIR } from '../../constants/index.js'
-import { log } from '../../log.js'
+import { ENGINE_DIR, MELON_TMP_DIR } from '../../constants'
+import { log } from '../../log'
 
-import { AddonInfo } from '../../utils/config.js'
-import { configDispatch } from '../../utils/dispatch.js'
-import { delay } from '../../utils/delay.js'
 import {
+  AddonInfo,
+  configDispatch,
+  delay,
   ensureDirectory,
   walkDirectoryTree,
   windowsPathToUnix,
-} from '../../utils/fs.js'
-
-import { downloadFileToLocation } from '../../utils/download.js'
-import { readItem } from '../../utils/store.js'
-import { discard } from '../discard.js'
+} from '../../utils'
+import { downloadFileToLocation } from '../../utils/download'
+import { readItem } from '../../utils/store'
+import { discard } from '../discard'
 import axios from 'axios'
 
 type GithubReleaseAssets =

@@ -1,16 +1,18 @@
 import { writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { create } from 'xmlbuilder2'
-import { DIST_DIR } from '../../constants/index.js'
-import { get } from '../../utils/dynamic-config.js'
-import { ensureDirectory, getSize } from '../../utils/fs.js'
-import { generateHash } from '../../utils/change-tracking.js'
-
+import { DIST_DIR } from '../../constants'
+import {
+  dynamicConfig,
+  ensureDirectory,
+  generateHash,
+  getSize,
+} from '../../utils'
 import {
   downloadAddon,
   getAddons,
   resolveAddonDownloadUrl,
-} from '../download/addon.js'
+} from '../download/addon'
 
 export async function generateAddonUpdateFiles() {
   const addons = []
@@ -44,7 +46,7 @@ export async function generateAddonUpdateFiles() {
   const path = join(
     DIST_DIR,
     'update/browser/addons',
-    get('brand'),
+    dynamicConfig.get('brand'),
     'update.xml'
   )
 

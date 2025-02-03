@@ -4,10 +4,9 @@
 import execa from 'execa'
 import { existsSync, writeFileSync } from 'node:fs'
 import { basename, resolve } from 'node:path'
-import { log } from '../log.js'
-import { ENGINE_DIR, SRC_DIR } from '../constants/index.js'
-import { delay } from '../utils/delay.js'
-import { ensureDirectory } from '../utils/fs.js'
+import { log } from '../log'
+import { ENGINE_DIR, SRC_DIR } from '../constants'
+import { delay, ensureDirectory } from '../utils'
 
 export const getPatchName = (file: string): string =>
   `${basename(file).replace(/\./g, '-')}.patch`

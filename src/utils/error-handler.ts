@@ -4,8 +4,8 @@
 import chalk from 'chalk'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { MELON_DIR } from '../constants/index.js'
-import { log } from '../log.js'
+import { MELON_DIR } from '../constants'
+import { log } from '../log'
 
 export const errorHandler = (error: Error, isUnhandledRej: boolean): never => {
   let cc = readFileSync(resolve(MELON_DIR, 'command')).toString()

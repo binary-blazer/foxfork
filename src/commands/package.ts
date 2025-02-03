@@ -6,17 +6,20 @@ import { copyFile, mkdir, readdir, unlink } from 'node:fs/promises'
 import { join, resolve } from 'node:path'
 
 import { bin_name, config } from '..'
-import { DIST_DIR, ENGINE_DIR, OBJ_DIR } from '../constants/index.js'
-import { log } from '../log.js'
-import { configDispatch } from '../utils/dispatch.js'
-import { set, get } from '../utils/dynamic-config.js'
-import { generateBrowserUpdateFiles } from './updates/browser.js'
-import { windowsPathToUnix } from '../utils/fs.js'
+import { DIST_DIR, ENGINE_DIR, OBJ_DIR } from '../constants'
+import { log } from '../log'
+import {
+  configDispatch,
+  dispatch,
+  dynamicConfig,
+  windowsPathToUnix,
+} from '../utils'
+import { generateBrowserUpdateFiles } from './updates/browser'
 
 const machPath = resolve(ENGINE_DIR, 'mach')
 
 export const foxforkPackage = async () => {
-  const brandingKey = get('brand') as string
+  const brandingKey = dynamicConfig.get('brand') as string
   const brandingDetails = config.brands[brandingKey]
 
   const version = brandingDetails.release.displayVersion
@@ -42,11 +45,7 @@ export const foxforkPackage = async () => {
     )}...`
   )
 
-  await configDispatch(machPath, {
-    args: arguments_,
-    cwd: ENGINE_DIR,
-    killOnError: true,
-  })
+  await dispatch(machPath, arguments_, ENGINE_DIR, true)
 
   log.info('Copying results up')
 
@@ -118,7 +117,7 @@ export const foxforkPackage = async () => {
   }
 
   const marPath = await createMarFile(version, channel)
-  set('marPath', marPath)
+  dynamicConfig.set('marPath', marPath)
 
   await generateBrowserUpdateFiles()
 
@@ -129,7 +128,7 @@ export const foxforkPackage = async () => {
 }
 
 function getCurrentBrandName(): string {
-  const brand = get('brand') as string
+  const brand = dynamicConfig.get('brand') as string
 
   if (brand == 'unofficial') {
     return 'Nightly'

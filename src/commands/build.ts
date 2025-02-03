@@ -5,14 +5,16 @@ import execa from 'execa'
 import { existsSync, readFileSync, writeFileSync } from 'node:fs'
 import { join, resolve } from 'node:path'
 import { bin_name, config } from '..'
-import { BUILD_TARGETS, CONFIGS_DIR, ENGINE_DIR } from '../constants/index.js'
-import { internalMozconfg } from '../constants/mozconfig.js'
-import { log } from '../log.js'
-import { patchCheck } from '../middleware/patch-check.js'
-import { BrandInfo } from '../utils/config.js'
-import { configDispatch } from '../utils/dispatch.js'
-import { get } from '../utils/dynamic-config.js'
-import { stringTemplate } from '../utils/string-template.js'
+import { BUILD_TARGETS, CONFIGS_DIR, ENGINE_DIR } from '../constants'
+import { internalMozconfg } from '../constants/mozconfig'
+import { log } from '../log'
+import { patchCheck } from '../middleware/patch-check'
+import {
+  BrandInfo,
+  configDispatch,
+  dynamicConfig,
+  stringTemplate,
+} from '../utils'
 
 const platform: Record<string, string> = {
   win32: 'windows',
@@ -23,7 +25,7 @@ const platform: Record<string, string> = {
 const applyConfig = async (os: string) => {
   log.info('Applying mozconfig...')
 
-  const brandingKey = get('brand')
+  const brandingKey = dynamicConfig.get('brand')
 
   let changeset
 
@@ -81,7 +83,7 @@ const applyConfig = async (os: string) => {
     '\n\n' +
     customConfig +
     '\n' +
-    internalMozconfg(brandingKey, get('buildMode'))
+    internalMozconfg(brandingKey, dynamicConfig.get('buildMode'))
 
   writeFileSync(resolve(ENGINE_DIR, 'mozconfig'), mergedConfig)
 

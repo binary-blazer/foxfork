@@ -4,10 +4,9 @@
 import { existsSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { bin_name } from '..'
-import { ENGINE_DIR } from '../constants/index.js'
-import { log } from '../log.js'
-import { config } from '../utils/config.js'
-import { configDispatch } from '../utils/dispatch.js'
+import { ENGINE_DIR } from '../constants'
+import { log } from '../log'
+import { config, dispatch } from '../utils'
 
 export const run = async (chrome?: string) => {
   const directories = readdirSync(ENGINE_DIR)
@@ -22,11 +21,12 @@ export const run = async (chrome?: string) => {
   const objectDirectory = resolve(ENGINE_DIR, objectDirname)
 
   if (existsSync(objectDirectory)) {
-    configDispatch('./mach', {
-      args: ['run', ...(chrome ? ['-chrome', chrome] : [])],
-      cwd: ENGINE_DIR,
-      killOnError: true,
-    })
+    dispatch(
+      './mach',
+      ['run', ...(chrome ? ['-chrome', chrome] : [])],
+      ENGINE_DIR,
+      true
+    )
   } else {
     log.error(
       `Unable to locate any built binaries.\nRun |${bin_name} build| to initiate a build.`

@@ -3,9 +3,9 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import { bin_name, config } from '..'
-import { log } from '../log.js'
-import { downloadInternals } from './download/firefox.js'
-import { getLatestFF } from '../utils/version.js'
+import { log } from '../log'
+import { downloadInternals } from './download/firefox'
+import { getLatestFF } from '../utils'
 
 export const update = async (): Promise<void> => {
   const version = await getLatestFF(config.version.product)

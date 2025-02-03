@@ -3,8 +3,8 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import execa from 'execa'
-import { BASH_PATH } from '../constants/index.js'
-import { log } from '../log.js'
+import { BASH_PATH } from '../constants'
+import { log } from '../log'
 
 export const removeTimestamp = (input: string): string =>
   input.replace(/\s\d{1,5}:\d\d\.\d\d /g, '')
@@ -84,5 +84,23 @@ export const configDispatch = (
     proc.on('exit', () => {
       resolve(true)
     })
+  })
+}
+
+/**
+ * @deprecated Use configDispatch instead
+ */
+export const dispatch = (
+  cmd: string,
+  arguments_?: string[],
+  cwd?: string,
+  killOnError?: boolean,
+  logger = (data: string) => log.info(data)
+): Promise<boolean> => {
+  return configDispatch(cmd, {
+    args: arguments_,
+    cwd: cwd,
+    killOnError: killOnError,
+    logger: logger,
   })
 }

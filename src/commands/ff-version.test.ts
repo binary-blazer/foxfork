@@ -1,8 +1,8 @@
 // This Source Code Form is subject to the terms of the Mozilla Public
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
-import * as config from '../utils/config.js'
-import { getFFVersion } from './ff-version.js'
+import * as config from '../utils/config'
+import { getFFVersion } from './ff-version'
 
 describe('getFFVersion', () => {
   it('Returns not specified with an empty config', () => {

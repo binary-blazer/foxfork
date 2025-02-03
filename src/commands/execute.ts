@@ -2,9 +2,9 @@
 // License, v. 2.0. If a copy of the MPL was not distributed with this
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import { existsSync } from 'node:fs'
-import { log } from '../log.js'
-import { ENGINE_DIR } from '../constants/index.js'
-import { configDispatch } from '../utils/dispatch.js'
+import { log } from '../log'
+import { ENGINE_DIR } from '../constants'
+import { dispatch } from '../utils'
 
 export const execute = async (cmd: string[]) => {
   if (existsSync(ENGINE_DIR)) {
@@ -20,7 +20,7 @@ export const execute = async (cmd: string[]) => {
         ' '
       )}\` in \`src\`...`
     )
-    configDispatch(bin, { args: arguments_, cwd: ENGINE_DIR })
+    dispatch(bin, arguments_, ENGINE_DIR)
   } else {
     log.error(`Unable to locate src directory.`)
   }

@@ -3,7 +3,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import { writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
-import { MELON_DIR } from '../constants/index.js'
+import { MELON_DIR } from '../constants'
 
 /**
  * Stores the name of the current command on the file system to be accessed if
