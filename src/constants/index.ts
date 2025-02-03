@@ -3,8 +3,12 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 import execa from 'execa'
 import { existsSync, mkdirSync, readdirSync } from 'node:fs'
-import { resolve } from 'node:path'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { log } from '../log.js'
+
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
 
 export const BIN_NAME = 'foxfork'
 

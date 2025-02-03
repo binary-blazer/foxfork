@@ -10,16 +10,11 @@ import { resolve } from 'node:path'
 import { errorHandler } from './utils/error-handler.js'
 import { config as configInited } from './utils/config.js'
 import { versionFormatter } from './utils/version-formatter.js'
-import { commands } from './cmds'
+import { commands } from './cmds.js'
 import { BIN_NAME, ENGINE_DIR } from './constants/index.js'
 import { updateCheck } from './middleware/update-check.js'
 import { registerCommand } from './middleware/register-command.js'
-import { log } from './log'
-
-// We have to use a dynamic require here, otherwise the typescript compiler
-// mucks up the directory structure
-// eslint-disable-next-line @typescript-eslint/no-var-requires, unicorn/prefer-module
-const { version: foxforkVersion } = require('../package.json')
+import { log } from './log.js'
 
 export const config = configInited
 
@@ -63,7 +58,7 @@ program
           reportedFFVersion ? `(being reported as ${reportedFFVersion})` : ''
         }`,
       },
-      { name: 'FoxFork', value: foxforkVersion },
+      { name: 'FoxFork', value: "1.0.0-rc.7" },
       reportedFFVersion
         ? `Mismatch detected between expected Firefox version and the actual version.\nYou may have downloaded the source code using a different version and\nthen switched to another branch.`
         : '',
