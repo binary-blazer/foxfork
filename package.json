@@ -7,7 +7,7 @@
   "bin": {
     "foxfork": "./dist/index.js"
   },
-  "files" : [
+  "files": [
     "dist",
     "template",
     "LICENSE",
